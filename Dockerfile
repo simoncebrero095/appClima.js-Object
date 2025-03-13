@@ -10,6 +10,9 @@ COPY . .
 # Instala las dependencias
 RUN npm install
 
+# Asegura los permisos de ejecución para webpack
+RUN chmod +x node_modules/.bin/webpack
+
 # Construye la aplicación
 RUN npm run build
 
